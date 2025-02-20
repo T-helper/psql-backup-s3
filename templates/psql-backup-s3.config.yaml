@@ -8,6 +8,7 @@ data:
   POSTGRES_HOST:        # postgres k8s service hostname
   POSTGRES_DB:          # name of database to backup
   AWS_DEFAULT_REGION:   # aws s3 bucket region
+  AWS_ENDPOINT_URL:     # aws s3 bucket endpoint url
   S3_BUCKET:            # aws s3 bucket name
   GPG_KEY_ID:           # email id used in gpg key generation
   GPG_KEY:              # exported public gpg key

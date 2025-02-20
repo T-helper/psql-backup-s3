@@ -13,6 +13,7 @@ if [ -z "$GPG_KEY" ] || \
     [ -z "$AWS_ACCESS_KEY_ID" ] || \
     [ -z "$AWS_SECRET_ACCESS_KEY" ] || \
     [ -z "$AWS_DEFAULT_REGION" ] || \
+    [ -z "$AWS_ENDPOINT_URL" ] || \
     [ -z "$S3_BUCKET" ]; then
     >&2 echo 'Required variable unset, database backup failed'
     exit 1
