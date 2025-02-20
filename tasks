@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-export IMAGE_NAME="cpcwood/psql-backup-s3"
-export IMAGE_TAG="1.0.1"
+export IMAGE_NAME="surgeond/psql-backup-s3"
+export IMAGE_TAG="1.0.2"
 
 function build {
   docker build \
