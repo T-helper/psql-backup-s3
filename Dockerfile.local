@@ -1,0 +1,22 @@
+FROM alpine:3.21
+
+RUN apk --update --no-cache add \
+    postgresql-client \
+    coreutils
+
+ENV APP_HOME=/opt/app
+
+RUN addgroup -S docker && \
+    adduser -S -G docker docker && \
+    mkdir -p $APP_HOME && \
+    chown docker:docker $APP_HOME
+
+USER docker
+
+WORKDIR $APP_HOME
+
+COPY --chown=docker:docker ./psql-backup-local.sh .
+
+RUN chmod 744 ./psql-backup-local.sh
+
+CMD ["./psql-backup-local.sh"]
